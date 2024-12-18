@@ -8,19 +8,21 @@ AR=ar cr
 
 RM=rm -f
 
-SRCS=
+SRCS= ft_printf.c function.c 
+
 OBJS= $(SRCS:.c=.o)
+
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(AR) $(NAME)
+	$(AR) $(NAME) $(OBJS)
 
 %.o : %.c ft_printf.h
 	$(CC) -c $(CFLAGS) $< -o $@
 
 clean :
-	$(RM) $(OBJS) $(OBJS_BONUS)
+	$(RM) $(OBJS)
 
 fclean : clean
 	$(RM) $(NAME)
