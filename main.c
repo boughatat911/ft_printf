@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <stdio.h>
+#include "ft_printf.h"
 int main()
 {
-    close(1);
-    int q = printf("SABONA\n");
-    int x = ft_printf("BOUGHTAT");
-    fprintf(stderr, "mine = %d \nsys = %d", x, q);
+    int x = ft_printf("%c%jm9%m\n",'\0');
+    int q =    printf("%c%jm9%m\n",'\0');
+    printf("{%d}\n{%d}\n",x,q);
 }
