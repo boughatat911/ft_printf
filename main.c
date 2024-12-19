@@ -1,13 +1,9 @@
 #include "ft_printf.h"
 #include <stdio.h>
-int	ft_putchar(char c)
-{
-	write (1, &c, 1);
-	return (1);
-}
+
 int main()
 {
-    int x = ft_printf("bdk\n");
-    int q =    printf("bdkb\n");
+    int x = ft_printf("bd%sb\n",NULL);
+    int q =    printf("bd%sb\n",NULL);
     printf("{%d}\n{%d}\n",x,q);
 }

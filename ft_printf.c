@@ -6,7 +6,7 @@
 /*   By: nbougrin <nbougrin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 20:08:20 by nbougrin          #+#    #+#             */
-/*   Updated: 2024/12/19 00:14:47 by nbougrin         ###   ########.fr       */
+/*   Updated: 2024/12/19 00:46:53 by nbougrin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_find(va_list args, char c)
 	else if(c == 'p')
 	{
 		i = ft_putstr("0x");
-		i = ft_putadd(va_arg(args, unsigned int));
+		i += ft_putadd(va_arg(args, unsigned long));
 	}
 	else if(c == 'i' || c == 'd')
 		i = ft_putnbr(va_arg(args, int));
@@ -37,7 +37,7 @@ int	ft_find(va_list args, char c)
 	else if(c == '%')
 		return (ft_putchar('%'));
 	else
-		i =  ft_putchar(c);	
+		return(ft_putchar(c));	
 	return (i);
 }
 int ft_printf(const char *str, ...)
@@ -63,4 +63,3 @@ int ft_printf(const char *str, ...)
 	va_end(args);
 	return(total);
 }
-
