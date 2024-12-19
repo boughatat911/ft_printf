@@ -8,7 +8,7 @@ AR=ar cr
 
 RM=rm -f
 
-SRCS= ft_printf.c function.c 
+SRCS= ft_printf.c function.c ft_hexa.c
 
 OBJS= $(SRCS:.c=.o)
 
